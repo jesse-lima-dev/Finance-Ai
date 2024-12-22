@@ -52,4 +52,6 @@ const Home = async ({ searchParams: { month } }: HomeProps) => {
   );
 };
 
+//
+
 export default Home;
