@@ -24,7 +24,7 @@ const PercentageItem = ({
         {title}
       </p>
       {/* Ícone */}
-      <div className="flex items-center justify-center rounded-lg bg-white bg-opacity-[3%] p-2">
+      <div className="flex items-center justify-center gap-3 rounded-lg bg-white bg-opacity-[3%] p-2">
         {icon}
       </div>
       {/* Valor */}
