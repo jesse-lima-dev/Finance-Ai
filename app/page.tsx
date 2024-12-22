@@ -7,6 +7,7 @@ import SummaryCards from "./(home)/_components/summary-cards";
 import TransactionsPieChart from "./(home)/_components/transactions-pie-chart";
 import { auth } from "@clerk/nextjs/server";
 import ExpensesPerCategory from "./(home)/_components/expenses-per-category";
+import LastTransactions from "./(home)/_components/last-transactions";
 
 interface HomeProps {
   searchParams: {
@@ -44,6 +45,7 @@ const Home = async ({ searchParams: { month } }: HomeProps) => {
               />
             </div>
           </div>
+          <LastTransactions lastTransactions={dashboard.lastTransactions} />
         </div>
       </div>
     </>
