@@ -6,6 +6,7 @@ import TimeSelect from "./(home)/_components/time-select";
 import SummaryCards from "./(home)/_components/summary-cards";
 import TransactionsPieChart from "./(home)/_components/transactions-pie-chart";
 import { auth } from "@clerk/nextjs/server";
+import ExpensesPerCategory from "./(home)/_components/expenses-per-category";
 
 interface HomeProps {
   searchParams: {
@@ -38,6 +39,9 @@ const Home = async ({ searchParams: { month } }: HomeProps) => {
             <SummaryCards month={month} {...dashboard} />
             <div className="grid h-full grid-cols-3 grid-rows-1 gap-6 overflow-hidden">
               <TransactionsPieChart {...dashboard} />
+              <ExpensesPerCategory
+                expensesPerCategory={dashboard.totalExpensePerCategory}
+              />
             </div>
           </div>
         </div>

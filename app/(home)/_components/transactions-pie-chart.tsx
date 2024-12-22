@@ -80,12 +80,11 @@ const TransactionsPieChart = ({
           </PieChart>
         </ChartContainer>
 
-        <div className="mt-4 space-y-3">
+        <div className="mt-4 flex flex-col space-y-3">
           <PercentageItem
             icon={<TrendingUpIcon size={24} className="text-primary" />}
             title="Receita"
             value={typesPercentage[TransactionType.DEPOSIT]}
-            isFirst
           />
           <PercentageItem
             icon={<TrendingDownIcon size={24} className="text-red-500" />}
@@ -96,6 +95,7 @@ const TransactionsPieChart = ({
             icon={<PiggyBankIcon size={24} className="text-gray-500" />}
             title="Investido"
             value={typesPercentage[TransactionType.INVESTIMENT]}
+            moveTitleRight
           />
         </div>
       </CardContent>
